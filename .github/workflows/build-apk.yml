@@ -24,6 +24,8 @@ jobs:
         run: unzip -q Day-by-Day-Android.zip -d android-source
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: ''
       - name: Install Android SDK packages
         run: sdkmanager 'platforms;android-35' 'build-tools;34.0.0'
       - name: Build and check
